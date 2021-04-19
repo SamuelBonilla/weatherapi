@@ -52,6 +52,13 @@ http://0.0.0.0:8000/weather?city=Bogota&country=co
 $ pytest
 ```
 
+### Heroku API ( Public URL )
+
+```sh
+https://weather-api-cache.herokuapp.com/weather?city=Bogota&country=co
+```
+
+
 License
 ----
 
