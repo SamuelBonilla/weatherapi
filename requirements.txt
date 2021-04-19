@@ -1,0 +1,7 @@
+fastapi
+aioredis
+starlette
+requests
+pytest
+uvicorn[standard]
+fastapi-cache2[redis]

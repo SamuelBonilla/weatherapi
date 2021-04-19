@@ -1,0 +1,26 @@
+version: '3.1'
+
+services:
+
+    redis:
+        image: redis
+        container_name: cache-globant
+        expose:
+            - 6379
+
+    app:
+        image: python:3
+        stdin_open: true
+        tty: true
+        environment:
+            REDIS_URL: redis://cache-globant
+            API_KEY: 1508a9a4840a5574c822d70ca2132032
+            URL: http://api.openweathermap.org/data/2.5/weather
+        working_dir: /project
+        # command: bash install.sh
+        ports:
+            - "8000:8000"
+        volumes:
+            - .:/project
+        links:
+            - redis:cache-globant
