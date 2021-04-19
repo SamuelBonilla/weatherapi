@@ -1,6 +1,6 @@
 fastapi
 aioredis
-starlette
+starlette==0.13.8
 requests
 pytest
 uvicorn[standard]
